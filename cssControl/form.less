@@ -1,0 +1,17 @@
+.placeholder(@color:@gray){
+  &::-webkit-input-placeholder{
+    color:@color;
+  }
+  &:-moz-placeholder{
+    color:@color;
+  }
+  &::-moz-placeholder{
+    color:@color;
+  }
+  &:-ms-input-placeholder{
+    color:@c@color;
+  }
+}
+
+input,textarea{.placeholder();}
+button{cursor:pointer;}

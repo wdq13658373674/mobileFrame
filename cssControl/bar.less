@@ -1,0 +1,28 @@
+//导航栏高度变量
+@bar-height:98/@rem;
+
+.bar(@color:@gray){
+  padding-left:20/@rem;
+  padding-right:20/@rem;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height:@bar-height;
+  line-height:@bar-height;
+  background-color:@gray;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bar-nav{.bar();top:0;.flexbox();.justify-content(space-between);
+  &~.content{margin-top:@bar-height;}
+
+  .title{margin:0 10px;}
+}
+
+.bar-footer{.bar();bottom:0;
+  &~.content{margin-bottom:@bar-height;}
+}
+
